@@ -26,7 +26,9 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     .scroll {
       color: #fff;
@@ -70,6 +72,32 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
       background-color: black;
       /* Change the background color to black */
+    }
+  </style>
+
+  <style>
+    /*mission Vision*/
+    .nav-pills .nav-link {
+      border: none;
+      background-color: #fff;
+    }
+
+    .nav-pills .nav-link:focus {
+      outline: none;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: #ffffff;
+      background-color: #0E46A3;
+    }
+
+    .nav .nav-link.active h6 i {
+      color: #ffffff !important;
+    }
+
+    .nav .nav-link.active h6 {
+      color: #ffffff !important;
     }
   </style>
 </head>
@@ -137,7 +165,7 @@
     </div>
   </section>
 
-  <section class="ftco-section">
+  <section class="ftco-section pb-0">
     <div class="container">
       <div class="row no-gutters">
         <div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/bg_3.png);">
@@ -165,6 +193,116 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="ftco-section pt-0">
+    <div class="container pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="about-title text-center mb-5">
+            <div class="title-border"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="d-flex justify-content-center mb-4 pb-2">
+            <ul class="nav nav-pills about-tab" id="aboutus" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-3 active" id="history-tab" data-bs-toggle="pill"
+                  data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">
+                  Our Mission
+                </button>
+              </li>
+              <li class="nav-item mx-3" role="presentation">
+                <button class="nav-link rounded-3" id="vision-tab" data-bs-toggle="pill" data-bs-target="#vision"
+                  type="button" role="tab" aria-controls="vision" aria-selected="false">
+                  Our Vision
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content about-content" id="tabContent">
+            <div class="tab-pane fade active show" id="history" role="tabpanel" aria-labelledby="history-tab">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <div class="history-img text-lg-end text-center mb-4 mb-lg-0">
+                    <img src="../SiteSphere/images/mission_image.jpg" alt="mission" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card border-0 p-3 ms-lg-4">
+                    <h4 class="about-title">Our Mission</h4>
+                    <p class="mt-4 pt-3 text-muted mb-2">
+                      <em>At One Consultant, our mission is deeply rooted
+                        in the belief that every business has the
+                        potential to thrive and succeed.</em>
+                    </p>
+                    <p class="text-muted">
+                      We are dedicated to empowering businesses of all
+                      sizes and industries to unlock their full
+                      potential and achieve their goals. Through our
+                      innovative solutions, comprehensive services, and
+                      unwavering support, we strive to be the catalyst
+                      for our clients' success. We are committed to
+                      providing personalized guidance and strategic
+                      advice tailored to the unique needs and challenges
+                      of each client, ensuring that they are equipped
+                      with the tools and resources necessary to overcome
+                      obstacles and seize opportunities. Our mission is
+                      to be a trusted partner and advocate for
+                      businesses, helping them navigate the complexities
+                      of the business landscape with confidence and
+                      clarity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <div class="card border-0 p-3 me-lg-4">
+                    <h4 class="about-title">Our Vision</h4>
+                    <p class="mt-4 pt-3 text-muted mb-2">
+                      <em>Our vision at One Consultant is to set the
+                        standard for excellence in the field of business
+                        consultancy services..</em>
+                    </p>
+                    <p class="text-muted">
+                      We aspire to be recognized as the premier provider
+                      of innovative solutions, unparalleled expertise,
+                      and exceptional service. We are committed to
+                      earning the trust and confidence of our clients by
+                      consistently delivering superior results and
+                      exceeding expectations. Our vision is to build
+                      long-lasting relationships with our clients based
+                      on integrity, transparency, and mutual respect. We
+                      aim to be the go-to resource for businesses
+                      seeking strategic guidance, practical advice, and
+                      actionable insights to drive growth, innovation,
+                      and success. By upholding the highest standards of
+                      professionalism and ethics, we strive to become
+                      the trusted advisor and partner of choice for
+                      businesses around the world.
+                    </p>
+                  </div>
+                  <!--end card-->
+                </div>
+                <!--end col-->
+                <div class="col-md-5">
+                  <div class="vision-img text-lg-end text-center mb-4 mb-lg-0">
+                    <img src="../SiteSphere/images/vision_image.jpg" alt="vision" class="img-fluid" />
+                  </div>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
 
 
