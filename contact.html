@@ -26,6 +26,52 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .scroll {
+      color: #fff;
+      margin-top: 100px;
+    }
+
+    #toTopBtn {
+      position: fixed;
+      bottom: 26px;
+      right: 39px;
+      z-index: 98;
+      padding: 21px;
+      background-color: black;
+      /* Change the background color to black */
+      background: url(../SiteSphere/images//cd-top-arrow.svg) no-repeat center 50%;
+      background-size: 50%;
+    }
+
+    .js .cd-top--fade-out {
+      opacity: .5;
+    }
+
+    .js .cd-top--is-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .js .cd-top {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .3s, visibility .3s, background-color .3s;
+    }
+
+    .cd-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+      background-color: black;
+      /* Change the background color to black */
+    }
+  </style>
 </head>
 
 <body>
@@ -52,6 +98,29 @@
     </div>
   </nav>
   <!-- END nav -->
+
+  <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+    data-abc="true"></a>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 20) {
+          $('#toTopBtn').fadeIn();
+        } else {
+          $('#toTopBtn').fadeOut();
+        }
+      });
+
+      $('#toTopBtn').click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 1000);
+        return false;
+      });
+    });
+  </script>
 
   <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');"
     data-stellar-background-ratio="0.5">
@@ -175,7 +244,7 @@
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved 
+              <script>document.write(new Date().getFullYear());</script> All rights reserved
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
