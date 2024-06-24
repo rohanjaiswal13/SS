@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SiteSphere</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .scroll {
+            color: #fff;
+            margin-top: 100px;
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: black;
+            /* Change the background color to black */
+            background: url(../SiteSphere/images//cd-top-arrow.svg) no-repeat center 50%;
+            background-size: 50%;
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5;
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s;
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background-color: black;
+            /* Change the background color to black */
+        }
+    </style>
+
+    <style>
+        .faq_area {
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-accordian {
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-accordian .card {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-accordian .card:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-accordian .card .card-header {
+            background-color: #fafafa;
+            padding: 0;
+            border-bottom-color: #ebebeb;
+        }
+
+        .faq-accordian .card .card-header h6 {
+            cursor: pointer;
+            padding: 1.75rem 2rem;
+            color: #3f43fd;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -ms-grid-row-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .faq-accordian .card .card-header h6 span {
+            font-size: 1.5rem;
+        }
+
+        .faq-accordian .card .card-header h6.collapsed {
+            color: #070a57;
+        }
+
+        .faq-accordian .card .card-header h6.collapsed span {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .faq-accordian .card .card-body {
+            padding: 1.75rem 2rem;
+        }
+
+        .faq-accordian .card .card-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .support-button p {
+                font-size: 14px;
+            }
+        }
+
+        .support-button i {
+            color: #3f43fd;
+            font-size: 1.25rem;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .support-button i {
+                font-size: 1rem;
+            }
+        }
+
+        .support-button a {
+            text-transform: capitalize;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .support-button a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SiteSphere</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+        data-abc="true"></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) {
+                    $('#toTopBtn').fadeIn();
+                } else {
+                    $('#toTopBtn').fadeOut();
+                }
+            });
+
+            $('#toTopBtn').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+        });
+    </script>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">FAQs</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span>FAQs<i
+                                class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="faq_area section_padding_130" id="faq">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <!-- Section Heading-->
+                        <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h2><span>Frequently </span> Asked Questions</h2>
+                            <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing
+                                page.</p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- FAQ Area-->
+                    <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="accordion faq-accordian" id="faqAccordion">
+                            <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s"
+                                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingOne">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">How can I install this
+                                        app?<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseOne" aria-labelledby="headingOne"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem
+                                            facere deserunt sint animi sapiente vitae suscipit.</p>
+                                        <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                            landing page.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s"
+                                style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingTwo">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="true" aria-controls="collapseTwo">The apps isn't installing?<span
+                                            class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem
+                                            facere deserunt sint animi sapiente vitae suscipit.</p>
+                                        <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                            landing page.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s"
+                                style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingThree">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="true" aria-controls="collapseThree">Contact form isn't
+                                        working?<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseThree" aria-labelledby="headingThree"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem
+                                            facere deserunt sint animi sapiente vitae suscipit.</p>
+                                        <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                            landing page.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Support Button-->
+                        <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp"
+                            data-wow-delay="0.5s"
+                            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i class="lni-emoji-sad"></i>
+                            <p class="mb-0 px-2">Can't find your answers?</p>
+                            <a href="#"> Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">SiteSphere</h2>
+                        <p>SiteSphere is dedicated to creating dynamic, responsive, and visually stunning websites that
+                            captivate users and drive business success. Our mission is to exceed client expectations
+                            through innovative design and seamless functionality.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                            <li><a href="services.html"><span class="icon-long-arrow-right mr-2"></span>Services</a>
+                            </li>
+                            <li><a href="project.html"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                            <li><a href="contact.html"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Services</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a>
+                            </li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Privacy Policy</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Team</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Terms Of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Newsletter</h2>
+
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control mb-2 text-center"
+                                    placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="form-control submit px-3">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
