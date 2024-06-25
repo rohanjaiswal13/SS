@@ -273,24 +273,6 @@
 		data-abc="true"></a>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 20) {
-					$('#toTopBtn').fadeIn();
-				} else {
-					$('#toTopBtn').fadeOut();
-				}
-			});
-
-			$('#toTopBtn').click(function () {
-				$("html, body").animate({
-					scrollTop: 0
-				}, 1000);
-				return false;
-			});
-		});
-	</script>
 
 
 	<section class="home-slider js-fullheight owl-carousel bg-white">
