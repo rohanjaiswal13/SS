@@ -40,96 +40,107 @@
 	// Scrollax
    $.Scrollax();
 
-	var carousel = function() {
-		$('.home-slider').owlCarousel({
-			margin:0,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
-			nav:false,
-			autoplayHoverPause: false,
-			items: 1,
-			navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-			responsive:{
-			  0:{
-				items:1
-			  },
-			  600:{
-				items:1
-			  },
-			  1000:{
-				items:1
-			  }
+   var carousel = function() {
+	$('.home-slider').owlCarousel({
+		margin: 0,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		nav: false,
+		autoplayHoverPause: false,
+		items: 1,
+		navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			1000: {
+				items: 1
 			}
-			});
-		$('.carousel-testimony').owlCarousel({
-			center: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 3
-				},
-				1000:{
-					items: 3
-				}
+		}
+	});
+	$('.carousel-testimony').owlCarousel({
+		center: true,
+		loop: true,
+		items: 1,
+		margin: 30,
+		stagePadding: 0,
+		nav: false,
+		navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 3
+			},
+			1000: {
+				items: 3
 			}
-		});
-		$('.carousel-client').owlCarousel({
-			center: true,
-			loop: true,
-			autoplay: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			dots: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 3
-				},
-				1000:{
-					items: 5
-				}
+		}
+	});
+	var clientCarousel = $('.carousel-client').owlCarousel({
+		center: true,
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 2500,
+		items: 1,
+		margin: 30,
+		stagePadding: 0,
+		nav: false,
+		dots: false,
+		navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 3
+			},
+			1000: {
+				items: 5
 			}
-		});
+		}
+	});
 
-		$('.single-slider').owlCarousel({
-			animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-			autoplay: true,
-			loop: true,
-			items:1,
-			margin: 0,
-			stagePadding: 0,
-			nav: true,
-			dots: true,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 1
-				},
-				1000:{
-					items: 1
-				}
-			}
-		});
+	// Stop autoplay on hover
+	clientCarousel.on('mouseover', '.owl-item', function(){
+		clientCarousel.trigger('stop.owl.autoplay');
+	});
 
-	};
-	carousel();
+	// Resume autoplay when not hovering
+	clientCarousel.on('mouseleave', '.owl-item', function(){
+		clientCarousel.trigger('play.owl.autoplay', [1000]); // Adjust timeout value if needed
+	});
+
+	$('.single-slider').owlCarousel({
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		autoplay: true,
+		loop: true,
+		items: 1,
+		margin: 0,
+		stagePadding: 0,
+		nav: true,
+		dots: true,
+		navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			1000: {
+				items: 1
+			}
+		}
+	});
+};
+carousel();
+
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
